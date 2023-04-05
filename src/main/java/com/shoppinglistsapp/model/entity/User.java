@@ -19,6 +19,6 @@ public class User {
     @Column(unique = true)
     private String username;
     private String password;
-//    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-//    private List<ShoppingList> shoppingLists = new ArrayList<>();
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<ShoppingList> shoppingLists = new ArrayList<>();
 }

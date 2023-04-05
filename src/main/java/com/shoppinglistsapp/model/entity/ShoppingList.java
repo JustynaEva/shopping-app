@@ -18,10 +18,10 @@ public class ShoppingList {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String name;
-//    @ManyToOne
-//    @JoinColumn(name = "user_id")
-//    private User user;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
-//    @OneToMany(mappedBy = "shoppingList", cascade = CascadeType.ALL)
-//    private List<Product> products = new ArrayList<>();
+    @OneToMany(mappedBy = "shoppingList", cascade = CascadeType.ALL)
+    private List<Product> products = new ArrayList<>();
 }
